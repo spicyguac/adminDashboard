@@ -1,9 +1,14 @@
 body {
+    display: flex;
     padding: 0;
     margin: 0;
+    justify-content: center;
+    background-color: black;
 }
 
 .container {
+    max-width: 120vh;
+    min-height: 100vh;
     display: grid;
     background-color: whitesmoke;
     grid-template-columns: 1fr 5fr;
@@ -29,6 +34,17 @@ body {
 
 .content > * {
     display: grid;
+}
+
+.announcements, .trending {
+    background-color: white;
+    grid-column: 2/3;
+}
+
+.article {
+    border-left: 6px solid rgb(252, 190, 75);
+    border-radius: 10px;
+    background-color: white;
 }
 
 .yourProject {
