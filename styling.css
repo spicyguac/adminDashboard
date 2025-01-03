@@ -1,8 +1,15 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
 .container {
     display: grid;
     background-color: whitesmoke;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 5fr;
+    padding: 0;
+    margin: 0;
 }
 
 .sidebar {
@@ -16,6 +23,8 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 2fr 2fr;
+    gap: 15px;
+    padding: 20px;
 }
 
 .content > * {
@@ -24,7 +33,8 @@
 
 .yourProject {
     grid-row: 1/3;
-    grid-template: 15px repeat(auto-fit, minmax(150px, 1fr)) / repeat(auto-fit, minmax(200px, 1.5fr));
+    grid-template: 15px repeat(auto-fit, minmax(100px, 1fr)) / repeat(auto-fit, minmax(200px, 1.5fr));
+    gap: 10px;
 }
 
 .yourProjectS {
