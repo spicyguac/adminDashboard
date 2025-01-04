@@ -83,7 +83,7 @@ body {
 
 
 .content{
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr .75fr;
     grid-template-rows: 2fr 2fr;
     gap: 15px;
     padding: 20px;
@@ -95,7 +95,6 @@ body {
 
 .announcements, .trending {
     display: grid;
-    background-color: white;
     grid-column: 2/3;
 }
 
@@ -143,13 +142,37 @@ p {
 
 #yourProjectS {
     grid-column: 1/-1;
-    
 }
 
 .announcements {
-    grid-column: 2/3;
+    gap: 15px;
+    grid-template-rows: 1rem .75fr;
+}
+
+.announcementList {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 15px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.announcementPiece{
+    display: grid;
+    grid-template-rows: 1rem 1fr;
+}
+
+.announcementTitle {
+    font-size: .75rem;
+}
+
+.announcementTitle + p {
+    font-size: .6rem;
+    padding: 0;
 }
 
 .trending {
     grid-column: 2/3;
 }
+
