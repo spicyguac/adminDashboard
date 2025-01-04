@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playwrite+DE+VA+Guides&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 * {
-    font-family: "Oswald", sans-serif;
+    font-family: "Roboto Mono", sans-serif;
 }
 
 
@@ -14,10 +14,9 @@ body {
 }
 
 .container {
-    max-width: 135vh;
     min-height: 100vh;
     display: grid;
-    background-color: whitesmoke;
+    background-color: azure;
     grid-template-columns: 1.25fr 5fr;
     grid-template-rows: 1fr 5fr;
     padding: 0;
@@ -84,7 +83,7 @@ body {
 
 .content{
     grid-template-columns: 2fr .75fr;
-    grid-template-rows: 2fr 2fr;
+    grid-template-rows: repeat(auto-fit, minmax(50px, 2fr));
     gap: 15px;
     padding: 20px;
 }
@@ -136,7 +135,7 @@ p {
 
 .yourProject {
     grid-row: 1/3;
-    grid-template: 15px repeat(auto-fit, minmax(100px, 1fr)) / repeat(auto-fit, minmax(200px, 1.5fr));
+    grid-template: 15px repeat(auto-fit, minmax(100px, 1fr)) / repeat(auto-fit, minmax(300px, 2fr));
     gap: 15px;
 }
 
@@ -144,15 +143,15 @@ p {
     grid-column: 1/-1;
 }
 
-.announcements {
+.announcements, .trending {
     gap: 15px;
     grid-template-rows: 1rem .75fr;
 }
 
 .announcementList {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 15px;
+    grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 30px;
     background-color: white;
     padding: 20px;
     border-radius: 10px;
@@ -164,6 +163,7 @@ p {
 }
 
 .announcementTitle {
+    grid-column: 1/3;
     font-size: .75rem;
 }
 
@@ -172,7 +172,30 @@ p {
     padding: 0;
 }
 
-.trending {
+.contacts {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(3rem, 1.5fr));
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    gap: 15px;
+}
+
+.indContact {
+    display: grid;
+    grid-template-columns: 3.5rem 1fr;
+    grid-template-rows: 1.5rem 1.5rem;
+}
+
+.contactPfp+ div + p {
+    padding: 0;
+    margin: 0;
+    justify-content: right;
     grid-column: 2/3;
+}
+
+.contactPfp {
+    width: 3rem;
+    height: auto;
 }
 
