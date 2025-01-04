@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-    max-width: 130vh;
+    max-width: 135vh;
     min-height: 100vh;
     display: grid;
     background-color: whitesmoke;
@@ -94,6 +94,7 @@ body {
 }
 
 .announcements, .trending {
+    display: grid;
     background-color: white;
     grid-column: 2/3;
 }
@@ -140,11 +141,9 @@ p {
     gap: 15px;
 }
 
-.yourProjectS {
+#yourProjectS {
     grid-column: 1/-1;
-    padding: 0;
-    margin: 0;
-    margin-block: 0;
+    
 }
 
 .announcements {
